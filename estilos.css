@@ -1,7 +1,65 @@
+.myCheckbox input:checked~span::after {
+    background: rgb(13, 170, 13);
+    transform: scale(.9) translate(33px);
+}
+
+.myCheckbox input:checked~span .on {
+    transform: translate(33px);
+    opacity: 1;
+}
+
+.myCheckbox input:checked~span .off {
+    transform: translate(33px);
+    opacity: 0;
+}
+
+.myCheckbox input {
+    display: none;
+}
+
 .myCheckbox span {
     display: inline-block;
     width: 60px;
     height: 30px;
     border-radius: 30px;
-    background-color: gray;
+    background-color: rgb(189, 185, 185);
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgb(18, 18, 18);
+    position: relative;
+}
+
+.myCheckbox span::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: scale(.9);
+    border-radius: 30px;
+    background: rgb(248, 22, 22);
+    transition: 0.5s;
+    box-shadow: inset 0 0 2px rgb(36, 35, 35);
+}
+
+.myCheckbox i {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    z-index: 1;
+    color: white;
+    transition: 0.5s;
+}
+
+.myCheckbox .on {
+    opacity: 0;
+    left: 5px;
+    top: 7px;
+}
+
+.myCheckbox .off {
+    left: 8px;
+    top: 7px;
+}
+
+.myCheckbox .off-bell {
+    left: 6px;
 }
