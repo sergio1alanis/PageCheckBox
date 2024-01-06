@@ -1,0 +1,7 @@
+.myCheckbox span {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: gray;
+}
